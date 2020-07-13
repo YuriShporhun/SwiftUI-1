@@ -20,7 +20,6 @@ struct ContentView: View {
     
     @State var showAlert: Bool = false
     
-    
     func computeScore() -> Int {
         let rDiff = rGuess - rTarget
         let gDiff = gGuess - gTarget
@@ -48,7 +47,6 @@ struct ContentView: View {
             ColorSlider(value: $bGuess, textColor: .blue)
         }
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
