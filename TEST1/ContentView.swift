@@ -31,7 +31,10 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Color(red: rTarget, green: gTarget, blue: bTarget)
-            Text("Угадайте данный цвет")
+            
+            self.showAlert ? Text("R: \(Int(rTarget * 255)) \(Int(gTarget * 255)) \(Int(bTarget * 255))") :
+                Text("Угадайте данный цвет")
+            
             Color(red: rGuess, green: gGuess, blue: bGuess)
             Text("R: G: B:")
             Button(action: {
