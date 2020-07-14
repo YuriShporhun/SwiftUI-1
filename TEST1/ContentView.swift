@@ -35,7 +35,15 @@ struct ContentView: View {
             self.showAlert ? Text("R: \(Int(rTarget * 255)) \(Int(gTarget * 255)) \(Int(bTarget * 255))") :
                 Text("Угадайте данный цвет")
             
-            Color(red: rGuess, green: gGuess, blue: bGuess)
+            ZStack(alignment: .center) {
+                Color(red: rGuess, green: gGuess, blue: bGuess)
+                Text("60")
+                    .padding(.all, 5)
+                    .background(Color.white)
+                    .mask(Circle())
+                    .foregroundColor(Color.black)
+            }
+            
             Text("R: G: B:")
             Button(action: {
                 self.showAlert = true
